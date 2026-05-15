@@ -1,13 +1,13 @@
 import TareaCard from "./TareaCard";
-import { tareasIniciales } from "../data/tareas";
 
-function listaTareas() {
+function ListaTareas({ tareas }) {
   return (
     <section>
-      {tareasIniciales.map((tarea) => (
+      {tareas.map((tarea) => (
         <TareaCard key={tarea.id} {...tarea} />
       ))}
     </section>
   );
 }
-export default listaTareas;
+
+export default ListaTareas;
